@@ -105,21 +105,28 @@ public class games {
 							}
 						}else {
 							int vida_atual = vida_boss - hit;//preciso criar uma var para mostrar o vida atual do inimigo
-							System.out.println("o dano foi de " +hit);
-							System.out.println("A vida do BOSS esta em: "+vida_atual);
-							System.out.println("o BOSS ira te atacar");
 							int vida_m = vida - magic_boss;
-							System.out.println("o dano do BOSS foi de " +magic_boss);
-							System.out.println("a sua vida esta em " +vida_m);
+							while(vida_m > 0 || vida_atual > 0) {
+								System.out.println("o BOSS ira te atacar");
+								System.out.println("o dano do BOSS foi de " +magic_boss);
+								System.out.println("a sua vida esta em " +vida_m);
+							System.out.println("Voce podera atacar novamente!");
+							comando =in.nextLine();
+							if(comando.equals("a") && vida_atual > 0) {
+								vida_atual = vida_atual - hit;
+								System.out.println("o dano foi de " +hit);
+								System.out.println("A vida do BOSS esta em: "+vida_atual);
+								System.out.println("o BOSS ira te atacar");
+							}else {System.out.println("GAME OVER");}
+							if(vida_m > 0) {
+								vida_m = vida_m - magic_boss;
+								System.out.println("o dano do BOSS foi de " +magic_boss);
+								System.out.println("a sua vida esta em " +vida_m);
+							}else {System.out.println("GAME OVER");}
+							}
 						}
 					}else {
-						int vida_atual = vida_boss - hit;//preciso criar uma var para mostrar o vida atual do inimigo
-						System.out.println("o dano foi de " +hit);
-						System.out.println("A vida do BOSS esta em: "+vida_atual);
-						System.out.println("o BOSS ira te atacar");
-						int vida_m = vida - magic_boss;
-						System.out.println("o dano do BOSS foi de " +magic_boss);
-						System.out.println("a sua vida esta em " +vida_m);
+						System.out.println("Voce fugio! GAME OVER");
 					}
 				}else {
 					System.out.println("Voce fugio! GAME OVER");
