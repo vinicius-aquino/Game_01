@@ -45,7 +45,7 @@ public class games {
 		System.out.println("WELCOME TO THE GAME! INSERT YOUR NAME:");
 		nome = in.nextLine();
 		System.out.println("Bem vindo " +nome);
-		System.out.println("Qual direção voce quer ir?(w,s,a,d)");
+		System.out.println("Qual direção voce quer ir?(w,s,)");
 		String comando = in.nextLine();
 		if(comando.equals("w")) {
 			System.out.println("Voce esta indo para frente!");
